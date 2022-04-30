@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfandega</title>
+    <style>
+        body {
+            background-color: rgb(15, 27, 27);
+            color: aliceblue;
+        }
+        div#res {
+            font: normal 14pt Arial;
+            color: blanchedalmond;
+        }
+    </style>
+</head> 
+<body>
+    <h1>Nacionalidade</h1>
+    <input type="text" name="txtnac" id="txtnac">
+    <input type="button" value="Verificar" onclick="Nacionalidade()">
+    <div id="res"></div>
+    <script>
+        function Nacionalidade(){
+            var txtn = window.document.querySelector('input#txtnac')
+            var res = window.document.querySelector('div#res')
+            var nac = String(txtnac.value)
+            res.innerHTML = `<p>Vivendo em <strong>${nac}</strong></p>`
+            if (nac == 'Brasil' || nac == 'brasil'){
+                res.innerHTML += `<p>Você é Brasileiro</p>`
+            } else {
+                res.innerHTML += `<p>Você é <strong>Estrangeiro</strong></p>`
+            }
+        }
+    </script>
+</body>
+</html>
