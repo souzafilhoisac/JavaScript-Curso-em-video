@@ -33,7 +33,7 @@ function verificar() {
                 img.setAttribute('src', 'man6.png')
             } else {
                 //idoso
-                img.setAttribute('src', 'man7.png')
+                img.setAttribute('src', 'man7.png')  
             }        
         
         } else if (fsex[1].checked) {
