@@ -9,7 +9,7 @@ function contar() {
         var numberP = Number(p);
         if (numberP === 0) {
             window.alert('Passo inválido! Considerando PASSO 1')
-            numberP += 1j
+            numberP += 1
         } else {
             var c = [];
             const numberF = Number(f);
