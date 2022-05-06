@@ -7,6 +7,21 @@ div#res {
     font: normal 15pt Arial;
 }
 
+option {
+    padding: 15px;
+}
+
+#dados {
+    text-align: center;
+}
+
+#seltab {
+    text-align: center;
+    border: none;
+    overflow: hidden;
+    margin-left: 175px;*/
+}
+
 header {
     color: white;
     text-align: center;
