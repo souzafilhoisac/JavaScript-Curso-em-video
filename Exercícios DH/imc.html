@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculando o IMC</title>
+</head>
+<body>
+    <h1>Pronto!</h1>
+    <script>
+        var nome = window.prompt('Qual é o seu nome?')
+        window.alert('Gostaria de saber o seu IMC de forma rápida e prática?')
+        window.alert('Tenha os dados do seu peso e altura em mãos!')
+        var altura = window.prompt('Digite a sua altura em centímetros? (Ex.: 1,80m = 180)')
+        var peso = window.prompt('Agora digite o seu peso.')
+        var IMC = peso/(altura*altura/10000)
+        document.write(`Olá <strong>${nome}</strong>, seu IMC é ${IMC.toFixed(2)}.<br/>`)
+        //lembrar da estrututa do if (if(){}) e que o console.log é para testes no terminal
+        //e não vai imprimir a informação, nesse exemplo usei o document.write
+        //importante também não deixar parametros abertos, utilizando o >= e o &&
+        if(IMC<18){
+            document.write('Você está abaixo do peso')
+        }
+        else if(IMC>=18 && IMC<25){
+            document.write('Você está no peso ideal.')
+        }
+        else if(IMC>=25 && IMC<30){
+            document.write('Você está com sobrepeso.')
+        }
+        else if(IMC>=30 && IMC<40){
+            document.write('Você está com obesidade moderada.')
+        }
+        else if(IMC>=40 && IMC<50){
+            document.write('Você está com obesidade grave.')
+        }
+        else {
+            document.write('Você está com obesidade gravíssima')
+        }
+        </script>
+</body>
+</html>
