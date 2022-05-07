@@ -2,6 +2,7 @@ function carregar() {
 var msg = window.document.getElementById('msg')
 var img = window.document.getElementById('imagem')
 var data = new Date()
+//var hora = 13
 var hora = data.getHours()
 var minuto = data.getMinutes()
 var segundos = data.getSeconds()
