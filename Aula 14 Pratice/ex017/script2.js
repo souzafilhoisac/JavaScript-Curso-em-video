@@ -1,14 +1,22 @@
 function gerar() {
     let num = window.document.getElementById('num').value
+    let tab = document.getElementById('seltab')
     let res = window.document.getElementById('res')
     if (num.length == 0) {
         window.alert('Por favor, digite um número!')
     } else {
         const nu = Number(num)
+        tab.innerHTML = ''
         if (nu != 0){
-            let tab = []
+            //let tab2 = []
             for (let i = 1; i <= 10; i++) {
-                tab.push(i)
+               let item = document.createElement('option')
+               item.text = `${nu} x ${i} = ${nu*i}`
+               item.value = `tab${i}` //segundo o professor, não faz tanto sentido pro
+               //javascript mas pra outras linguagens faz diferença
+               tab.appendChild(item)
+            }
+                /*tab2.push(i)
                 res.innerText = `${nu} x ${tab[0]} = ${nu*tab[0]}
                 ${nu} x ${tab[1]} = ${nu*tab[1]}
                 ${nu} x ${tab[2]} = ${nu*tab[2]}
@@ -20,7 +28,7 @@ function gerar() {
                 ${nu} x ${tab[8]} = ${nu*tab[8]}
                 ${nu} x ${tab[9]} = ${nu*tab[9]}`
             }
-            /*res.innerHTML = `${nu} x 1 = ${nu*1}</br>
+            res.innerHTML = `${nu} x 1 = ${nu*1}</br>
             ${nu} x 2 = ${nu*2}</br>
             ${nu} x 3 = ${nu*3}</br>
             ${nu} x 4 = ${nu*4}</br>
