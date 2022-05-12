@@ -7,7 +7,9 @@ function verificar() {
         window.alert(`[ERRO]Verifique os dados e tente novamente`)
     } else {
         var fsex = document.getElementsByName('radsex')
+        //os inputs masc e fem tem o mesmo name 'radsex' para serem marcados um ou outro
         var idade = ano - Number(fano.value)
+        //essa variável tem o calculo do ano atual menos o ano que o usuario
         var gênero = ''
         var img = document.createElement('img')
         img.setAttribute('id', 'foto')
