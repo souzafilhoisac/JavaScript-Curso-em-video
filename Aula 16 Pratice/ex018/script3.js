@@ -2,7 +2,7 @@ let num = document.getElementById('txtn')
 let fbox = document.getElementById('fullbox')
 let res = document.getElementById('res')
 let lista = []
-
+    
 function adicionar() {
     let n = Number(num.value);
     if (num.value.length == 0 || n > 100 || n < 0 || lista.indexOf(n) != -1) {
